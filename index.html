@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Metronome</title>
+</head>
+
+<body class="min-h-screen bg-zinc-900 flex items-center justify-center font-space-mono text-zinc-100">
+
+  <div id="metronomeCard" class="w-80 rounded-xl border-2 border-zinc-700 bg-zinc-800 p-6
+                  shadow-[0_8px_0_#18181b]">
+
+    <!-- BPM DISPLAY -->
+    <div class="mb-6 text-center">
+      <div id="bpmValue" class="tempo text-6xl font-bold tracking-tight text-emerald-400
+                      drop-shadow-[0_0_6px_rgba(52,211,153,0.6)]">
+        120
+      </div>
+      <div class="mt-1 text-sm uppercase tracking-widest text-zinc-400">
+        BPM
+      </div>
+    </div>
+
+    <!-- TEMPO SLIDER -->
+    <div class="mb-6 flex items-center gap-3">
+      <!-- BPM MINUS -->
+      <button id="bpmMinus" class="h-8 w-8 rounded border border-zinc-600 bg-zinc-700
+                        shadow-[0_2px_0_#18181b] cursor-pointer
+                        active:translate-y-0.5 active:shadow-none
+                        flex items-center justify-center">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-zinc-100" fill="none" viewBox="0 0 24 24"
+          stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M20 12H4" />
+        </svg>
+      </button>
+
+      <!-- BPM SLIDER -->
+      <div id="bpmSlider" class="relative h-2 flex-1 rounded bg-zinc-700 cursor-pointer touch-none">
+        <div id="sliderKnob" class="absolute top-0 h-2 w-3 rounded bg-emerald-400 shadow
+                    -translate-x-1/2" style="left: 50%">
+        </div>
+      </div>
+
+      <!-- BPM PLUS -->
+      <button id="bpmPlus" class="h-8 w-8 rounded border border-zinc-600 bg-zinc-700
+                        shadow-[0_2px_0_#18181b] cursor-pointer
+                        active:translate-y-0.5 active:shadow-none
+                        flex items-center justify-center">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-zinc-100" fill="none" viewBox="0 0 24 24"
+          stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4" />
+        </svg>
+      </button>
+    </div>
+
+    <!-- TOGGLE BUTTON -->
+    <div class="mb-6 flex justify-center">
+      <button id="toggleBtn" class="h-14 w-14 rounded-full border-2 border-zinc-600 bg-zinc-700
+                  text-emerald-400 shadow-[0_4px_0_#18181b] cursor-pointer
+                  flex items-center justify-center
+                  active:translate-y-1 active:shadow-none">
+
+        <!-- PLAY ICON -->
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M8 5v14l11-7z" />
+        </svg>
+      </button>
+    </div>
+
+    <!-- BEATS PER MEASURE -->
+    <div class="mb-2 flex items-center justify-center gap-4">
+      <!-- BEATS MINUS -->
+      <button id="beatsMinus" class="h-8 w-8 rounded border border-zinc-600 bg-zinc-700
+                        shadow-[0_2px_0_#18181b] cursor-pointer
+                        active:translate-y-0.5 active:shadow-none
+                        flex items-center justify-center">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-zinc-100" fill="none" viewBox="0 0 24 24"
+          stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M20 12H4" />
+        </svg>
+      </button>
+
+      <!-- BEATS VALUE -->
+      <div id="beatsValue" class="text-2xl font-bold text-emerald-400">
+        4
+      </div>
+
+      <!-- BEATS PLUS -->
+      <button id="beatsPlus" class="h-8 w-8 rounded border border-zinc-600 bg-zinc-700
+                        shadow-[0_2px_0_#18181b] cursor-pointer
+                        active:translate-y-0.5 active:shadow-none
+                        flex items-center justify-center">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-zinc-100" fill="none" viewBox="0 0 24 24"
+          stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4" />
+        </svg>
+      </button>
+    </div>
+
+    <div class="text-center text-xs uppercase tracking-widest text-zinc-400">
+      Beats per measure
+    </div>
+
+  </div>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import "tailwindcss";
+
+@theme {
+    --font-space-mono: "Space Mono", monospace;
+}
+
+@keyframes accentFlash {
+    0% {
+        box-shadow: 0 0 0px rgba(16, 185, 129, 0);
+    }
+
+    30% {
+        box-shadow: 0 0 40px rgba(16, 185, 129, 0.9);
+    }
+
+    100% {
+        box-shadow: 0 0 0px rgba(16, 185, 129, 0);
+    }
+}
+
+.accent-glow {
+    animation: accentFlash 0.2s ease-out;
+}
